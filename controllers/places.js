@@ -2,7 +2,6 @@ const router = require('express').Router()
 const places = require('../Models/places.js')
 
 router.get('/:id', (req, res) => {
-  res.render('places/show')
 })
 
 router.get('/:id', (req, res) => {
@@ -14,11 +13,12 @@ router.get('/:id', (req, res) => {
     res.render('error404')
   }
   else {
-    res.render('places/show')
+    res.render('places/show', { place: places[id], id })
   }
 })
 
-res.render('places/show', { place: places[id] })
+
+
 
 
 router.post('/', (req, res) => {
