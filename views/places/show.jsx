@@ -40,7 +40,8 @@ function show (data) {
           </form>
         </div>
       )
-    })
+    }
+    )
   }
   return (
       <Def>
@@ -112,7 +113,7 @@ function show (data) {
         </main>
       </Def>
   )
-}
+  }
 
 module.exports = show
 
